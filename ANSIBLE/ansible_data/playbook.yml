@@ -1,0 +1,33 @@
+---
+- name: Ensure required services are installed and running
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure packages are installed
+      package:
+        name:
+          - fish
+          - tmux
+          - mc
+          - wget
+          - tree
+          - git
+        state: present
+
+    - name: Ensure Docker is installed (only for docker host)
+      when: inventory_hostname == 'frederik-dockerhost'
+      package:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-buildx-plugin
+          - docker-compose-plugin
+        state: present
+
+    - name: Ensure Docker service is running (only for docker host)
+      when: inventory_hostname == 'frederik-dockerhost'
+      service:
+        name: docker
+        state: started
+        enabled: yes

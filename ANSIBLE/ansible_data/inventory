@@ -1,0 +1,17 @@
+[linux_servers]
+frederik-dockerhost ansible_host="10.10.10.130" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-ansible ansible_host="10.10.10.131" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-ubuntu ansible_host="10.10.10.132" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-centos ansible_host="10.10.10.133" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-opensuse ansible_host="10.10.10.134" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+
+[ubuntu]
+frederik-dockerhost ansible_host="10.10.10.130" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-ansible ansible_host="10.10.10.131" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+frederik-ubuntu ansible_host="10.10.10.132" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+
+[centos]
+frederik-centos ansible_host="10.10.10.133" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
+
+[opensuse]
+frederik-opensuse ansible_host="10.10.10.134" ansible_ssh_user='vagrant' ansible_ssh_pass='vagrant' ansible_become_pass='vagrant'
