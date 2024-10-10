@@ -1,0 +1,10 @@
+---
+- name: Ping Google DNS
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Ping 8.8.8.8
+      ansible.builtin.ping:
+      delegate_to: "{{ item }}"
+      with_items:
+        - 8.8.8.8
